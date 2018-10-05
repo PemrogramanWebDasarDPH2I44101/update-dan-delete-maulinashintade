@@ -1,10 +1,10 @@
 <?php
-require_once("db.php");git 
+require_once("db.php");
 ?>
 <table border=1>
     <thead>
         <th>Nama</th>
-        <th>Nim</th>
+        <th>NIM</th>
         <th>Tanggal Lahir</th>
     </thead>
     <tbody>
@@ -13,7 +13,7 @@ $sql    = "SELECT * FROM siswa";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-    // output data of each row
+    
     while($row = mysqli_fetch_assoc($result)) {
         echo "<tr>";
         echo "<td>" . $row["nama"]. "</td>"; 
